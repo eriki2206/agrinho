@@ -1,0 +1,126 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50; /* Verde campo */
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Para empilhar as seções em telas pequenas */
+}
+
+/* Estilos para a Seção Campo */
+.campo {
+    position: relative;
+    height: 60vh; /* Altura da seção */
+    background: url('https://via.placeholder.com/1500x800/8BC34A/FFFFFF?text=Paisagem+Rural') no-repeat center center/cover; /* Imagem de fundo para o campo */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.campo .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 20px;
+}
+
+.campo h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+.campo p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+/* Estilos para a Seção Cidade */
+.cidade {
+    position: relative;
+    height: 60vh; /* Altura da seção */
+    background: url('https://via.placeholder.com/1500x800/607D8B/FFFFFF?text=Paisagem+Urbana') no-repeat center center/cover; /* Imagem de fundo para a cidade */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cidade .overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para o texto */
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 20px;
+}
+
+.cidade h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+.cidade p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row; /* Lado a lado em telas maiores */
+    }
+
+    .campo, .cidade {
+        flex: 1; /* Distribui o espaço igualmente */
+        height: 80vh; /* Altura maior em telas maiores */
+    }
+}
+
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .campo h2, .cidade h2 {
+        font-size: 1.8em;
+    }
+
+    .campo p, .cidade p {
+        font-size: 1em;
+    }
+}
